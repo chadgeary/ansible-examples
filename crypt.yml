@@ -1,0 +1,9 @@
+- name: decrypt
+  hosts: '{{ target }}'
+  vars:
+    encryptstringvar: PLACEHOLDER
+  tasks:
+  - name: run shell command(s)
+    shell: '{{ commands }}'
+    register: some_command
+  - debug: var=some_command.stdout_lines
