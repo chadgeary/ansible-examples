@@ -6,7 +6,7 @@ Example playbooks / tools
 ansible-playbook shell.yml --extra-vars "commands='whoami && uptime' target=127.0.0.1"
 ```
 
-# crypt.yml - generate / store encrypted string(s) in playbooks
+# crypt.yml - encrypted string(s) in playbooks
 ```
 # generate password file (~/password.txt)
 cat /dev/urandom | tr -dc 'a-zA-Z0-9=;:`"<>,./?!@#$%^&(){}[]' | fold -w 512 | head -n 1 > ~/password.txt
