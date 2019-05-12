@@ -11,7 +11,7 @@ ansible-playbook shell.yml --extra-vars "commands='whoami && uptime' target=127.
 # generate password file (~/password.txt)
 cat /dev/urandom | tr -dc 'a-zA-Z0-9=;:`"<>,./?!@#$%^&(){}[]' | fold -w 512 | head -n 1 > ~/password.txt
 
-# encrypt string with password file
+# encrypt string with password file (type/paste string, then CTRL+D)
 ansible-vault encrypt_string --vault-password-file=~/password.txt > ~/encryptstring.txt
 
 # replace PLACEHOLDER with content of ~/encryptstring.txt in crypt.yml
