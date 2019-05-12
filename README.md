@@ -3,7 +3,7 @@ Example playbooks / tools
 
 # shell.yml - run ad hoc command(s) on ad hoc target(s)
 ```
-ansible-playbook shell.yml --extra-vars "commands='whoami && uptime' target=127.0.0.1"
+ansible-playbook shell.yml --extra-vars "command='whoami && uptime' target=127.0.0.1,vm2.example.com,target3"
 ```
 
 # crypt.yml - encrypted string(s) in playbooks

@@ -1,6 +1,6 @@
 - hosts: '{{ target }}'
   tasks:
   - name: run shell command(s)
-    shell: '{{ commands }}'
-    register: some_command
-  - debug: var=some_command.stdout_lines
+    shell: '{{ command }}'
+    register: shell_command
+  - debug: var=shell_command.stdout_lines
